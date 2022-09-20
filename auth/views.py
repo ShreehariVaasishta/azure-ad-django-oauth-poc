@@ -49,7 +49,7 @@ def login(request, *args, **kwargs):
 def ad_callback(request, *args, **kwargs):
     result = _build_msal_app().acquire_token_by_auth_code_flow(django_cache.get("flow", {}), request.GET)
     if "error" in result:
-        return HttpResponse(result)
+        return HttpResponse(f"<h1>{result.get('error')}</h1><p>{result.get('error_description')}</p>")
     # create user
     email = result.get("id_token_claims").get("preferred_username")
     profile_info = {
