@@ -1,0 +1,21 @@
+.vscode
+*.pyc
+__pycache__
+node_modules/
+.DS_Store
+
+media/
+staticfiles/
+static/.DS_Store
+/static/js/build/
+./test.html
+./test.py
+tests
+.next/
+# local configuration files
+*.env
+dphi.conf
+secrets.conf
+# google calendar credentials file
+calendar_invite.json
+app_config.py
